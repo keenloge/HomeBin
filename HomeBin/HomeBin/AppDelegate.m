@@ -2,11 +2,13 @@
 //  AppDelegate.m
 //  HomeBin
 //
-//  Created by Keen on 2017/4/13.
-//  Copyright © 2017年 Keen. All rights reserved.
+//  Created by HomeBin on 2017/4/13.
+//  Copyright © 2017年 HomeBin. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "BaseNavigationController.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +16,18 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)instance {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    id con = [[BaseNavigationController alloc] initWithRootViewController:[HomeViewController new]];
+    self.window.rootViewController = con;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -46,6 +57,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

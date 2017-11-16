@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  HomeBin
 //
-//  Created by Keen on 2017/4/13.
-//  Copyright © 2017年 Keen. All rights reserved.
+//  Created by HomeBin on 2017/4/13.
+//  Copyright © 2017年 HomeBin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (AppDelegate *)instance;
 
 @end
 

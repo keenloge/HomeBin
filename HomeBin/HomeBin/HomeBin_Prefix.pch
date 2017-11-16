@@ -1,0 +1,19 @@
+//
+//  HomeBin_Prefix.pch
+//  HomeBin
+//
+//  Created by HomeBin on 2017/11/16.
+//  Copyright © 2017年 HomeBin. All rights reserved.
+//
+
+#ifndef HomeBin_Prefix_pch
+#define HomeBin_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Masonry.h"
+#import "ColorHelper.h"
+#import "Declare.h"
+
+#endif /* HomeBin_Prefix_pch */

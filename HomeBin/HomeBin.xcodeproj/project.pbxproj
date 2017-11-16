@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		113636641E9F1D51009C4D73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 113636631E9F1D51009C4D73 /* main.m */; };
 		113636671E9F1D51009C4D73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 113636661E9F1D51009C4D73 /* AppDelegate.m */; };
-		1136366A1E9F1D51009C4D73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113636691E9F1D51009C4D73 /* ViewController.m */; };
-		1136366D1E9F1D51009C4D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1136366B1E9F1D51009C4D73 /* Main.storyboard */; };
 		1136366F1E9F1D51009C4D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1136366E1E9F1D51009C4D73 /* Assets.xcassets */; };
 		113636721E9F1D51009C4D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113636701E9F1D51009C4D73 /* LaunchScreen.storyboard */; };
 		48BFA6D9A6A35CDA712298C4 /* libPods-HomeBin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */; };
+		B75163451FBD291D00795450 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163411FBD291D00795450 /* UIButton+Block.m */; };
+		B75163461FBD291D00795450 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163421FBD291D00795450 /* NSTimer+Block.m */; };
+		B75163531FBD296E00795450 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751634A1FBD296E00795450 /* BaseViewController.m */; };
+		B75163541FBD296E00795450 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751634B1FBD296E00795450 /* BaseNavigationController.m */; };
+		B75163551FBD296E00795450 /* BaseListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751634C1FBD296E00795450 /* BaseListController.m */; };
+		B75163561FBD296E00795450 /* BasePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751634E1FBD296E00795450 /* BasePageController.m */; };
+		B75163571FBD296E00795450 /* BasePopPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163521FBD296E00795450 /* BasePopPushController.m */; };
+		B75163611FBD2C0800795450 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163601FBD2C0800795450 /* BaseButton.m */; };
+		B75163641FBD2CFD00795450 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163631FBD2CFD00795450 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,15 +28,33 @@
 		113636631E9F1D51009C4D73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		113636651E9F1D51009C4D73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		113636661E9F1D51009C4D73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		113636681E9F1D51009C4D73 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		113636691E9F1D51009C4D73 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1136366C1E9F1D51009C4D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1136366E1E9F1D51009C4D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113636711E9F1D51009C4D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113636731E9F1D51009C4D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HomeBin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.debug.xcconfig"; sourceTree = "<group>"; };
 		AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.release.xcconfig"; sourceTree = "<group>"; };
+		B75163411FBD291D00795450 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		B75163421FBD291D00795450 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		B75163431FBD291D00795450 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
+		B75163441FBD291D00795450 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		B75163491FBD296E00795450 /* BasePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePageController.h; sourceTree = "<group>"; };
+		B751634A1FBD296E00795450 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B751634B1FBD296E00795450 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		B751634C1FBD296E00795450 /* BaseListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseListController.m; sourceTree = "<group>"; };
+		B751634D1FBD296E00795450 /* BasePopPushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePopPushController.h; sourceTree = "<group>"; };
+		B751634E1FBD296E00795450 /* BasePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePageController.m; sourceTree = "<group>"; };
+		B751634F1FBD296E00795450 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		B75163501FBD296E00795450 /* BaseListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseListController.h; sourceTree = "<group>"; };
+		B75163511FBD296E00795450 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		B75163521FBD296E00795450 /* BasePopPushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePopPushController.m; sourceTree = "<group>"; };
+		B751635B1FBD2B0500795450 /* HomeBin_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBin_Prefix.pch; sourceTree = "<group>"; };
+		B751635C1FBD2BC200795450 /* Declare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Declare.h; sourceTree = "<group>"; };
+		B751635D1FBD2BC200795450 /* ColorHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorHelper.h; sourceTree = "<group>"; };
+		B751635F1FBD2C0800795450 /* BaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseButton.h; sourceTree = "<group>"; };
+		B75163601FBD2C0800795450 /* BaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
+		B75163621FBD2CFD00795450 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B75163631FBD2CFD00795450 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,14 +90,16 @@
 		113636611E9F1D51009C4D73 /* HomeBin */ = {
 			isa = PBXGroup;
 			children = (
+				B75163581FBD29EA00795450 /* Modular */,
+				B75163471FBD294400795450 /* BaseClass */,
+				B75163401FBD28E300795450 /* Global */,
+				B751633F1FBD28BD00795450 /* Additioin */,
 				113636651E9F1D51009C4D73 /* AppDelegate.h */,
 				113636661E9F1D51009C4D73 /* AppDelegate.m */,
-				113636681E9F1D51009C4D73 /* ViewController.h */,
-				113636691E9F1D51009C4D73 /* ViewController.m */,
-				1136366B1E9F1D51009C4D73 /* Main.storyboard */,
 				1136366E1E9F1D51009C4D73 /* Assets.xcassets */,
 				113636701E9F1D51009C4D73 /* LaunchScreen.storyboard */,
 				113636731E9F1D51009C4D73 /* Info.plist */,
+				B751635B1FBD2B0500795450 /* HomeBin_Prefix.pch */,
 				113636621E9F1D51009C4D73 /* Supporting Files */,
 			);
 			path = HomeBin;
@@ -101,6 +128,94 @@
 				3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B751633F1FBD28BD00795450 /* Additioin */ = {
+			isa = PBXGroup;
+			children = (
+				B75163431FBD291D00795450 /* NSTimer+Block.h */,
+				B75163421FBD291D00795450 /* NSTimer+Block.m */,
+				B75163441FBD291D00795450 /* UIButton+Block.h */,
+				B75163411FBD291D00795450 /* UIButton+Block.m */,
+			);
+			path = Additioin;
+			sourceTree = "<group>";
+		};
+		B75163401FBD28E300795450 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B751635D1FBD2BC200795450 /* ColorHelper.h */,
+				B751635C1FBD2BC200795450 /* Declare.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		B75163471FBD294400795450 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				B751635E1FBD2C0800795450 /* Button */,
+				B75163481FBD296E00795450 /* Controller */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		B75163481FBD296E00795450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B751634F1FBD296E00795450 /* BaseNavigationController.h */,
+				B751634B1FBD296E00795450 /* BaseNavigationController.m */,
+				B751634D1FBD296E00795450 /* BasePopPushController.h */,
+				B75163521FBD296E00795450 /* BasePopPushController.m */,
+				B75163511FBD296E00795450 /* BaseViewController.h */,
+				B751634A1FBD296E00795450 /* BaseViewController.m */,
+				B75163501FBD296E00795450 /* BaseListController.h */,
+				B751634C1FBD296E00795450 /* BaseListController.m */,
+				B75163491FBD296E00795450 /* BasePageController.h */,
+				B751634E1FBD296E00795450 /* BasePageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B75163581FBD29EA00795450 /* Modular */ = {
+			isa = PBXGroup;
+			children = (
+				B75163651FBD2E1A00795450 /* Home */,
+				B751635A1FBD2A0E00795450 /* DrawingBoard */,
+				B75163591FBD2A0100795450 /* MenuIndex */,
+			);
+			path = Modular;
+			sourceTree = "<group>";
+		};
+		B75163591FBD2A0100795450 /* MenuIndex */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuIndex;
+			sourceTree = "<group>";
+		};
+		B751635A1FBD2A0E00795450 /* DrawingBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DrawingBoard;
+			sourceTree = "<group>";
+		};
+		B751635E1FBD2C0800795450 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B751635F1FBD2C0800795450 /* BaseButton.h */,
+				B75163601FBD2C0800795450 /* BaseButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		B75163651FBD2E1A00795450 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B75163621FBD2CFD00795450 /* HomeViewController.h */,
+				B75163631FBD2CFD00795450 /* HomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,11 +247,12 @@
 		113636571E9F1D51009C4D73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Keen;
 				TargetAttributes = {
 					1136365E1E9F1D51009C4D73 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = ULP85HJC9V;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,7 +282,6 @@
 			files = (
 				113636721E9F1D51009C4D73 /* LaunchScreen.storyboard in Resources */,
 				1136366F1E9F1D51009C4D73 /* Assets.xcassets in Resources */,
-				1136366D1E9F1D51009C4D73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,23 +343,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1136366A1E9F1D51009C4D73 /* ViewController.m in Sources */,
+				B75163541FBD296E00795450 /* BaseNavigationController.m in Sources */,
+				B75163551FBD296E00795450 /* BaseListController.m in Sources */,
+				B75163531FBD296E00795450 /* BaseViewController.m in Sources */,
+				B75163461FBD291D00795450 /* NSTimer+Block.m in Sources */,
+				B75163611FBD2C0800795450 /* BaseButton.m in Sources */,
 				113636671E9F1D51009C4D73 /* AppDelegate.m in Sources */,
+				B75163571FBD296E00795450 /* BasePopPushController.m in Sources */,
+				B75163561FBD296E00795450 /* BasePageController.m in Sources */,
 				113636641E9F1D51009C4D73 /* main.m in Sources */,
+				B75163451FBD291D00795450 /* UIButton+Block.m in Sources */,
+				B75163641FBD2CFD00795450 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1136366B1E9F1D51009C4D73 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1136366C1E9F1D51009C4D73 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		113636701E9F1D51009C4D73 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -266,7 +381,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -274,7 +391,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -314,7 +435,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -322,7 +445,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -351,7 +478,10 @@
 			baseConfigurationReference = A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ULP85HJC9V;
+				GCC_PREFIX_HEADER = HomeBin/HomeBin_Prefix.pch;
 				INFOPLIST_FILE = HomeBin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenloge.HomeBin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,7 +493,10 @@
 			baseConfigurationReference = AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ULP85HJC9V;
+				GCC_PREFIX_HEADER = HomeBin/HomeBin_Prefix.pch;
 				INFOPLIST_FILE = HomeBin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenloge.HomeBin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +522,7 @@
 				113636781E9F1D51009C4D73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,3 +1,4 @@
 
 HomeBin/Pods/*
 HomeBin/Podfile.lock
+.DS_Store

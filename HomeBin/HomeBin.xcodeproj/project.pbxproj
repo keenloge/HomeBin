@@ -13,6 +13,7 @@
 		1136366D1E9F1D51009C4D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1136366B1E9F1D51009C4D73 /* Main.storyboard */; };
 		1136366F1E9F1D51009C4D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1136366E1E9F1D51009C4D73 /* Assets.xcassets */; };
 		113636721E9F1D51009C4D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113636701E9F1D51009C4D73 /* LaunchScreen.storyboard */; };
+		48BFA6D9A6A35CDA712298C4 /* libPods-HomeBin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1136366E1E9F1D51009C4D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		113636711E9F1D51009C4D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		113636731E9F1D51009C4D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HomeBin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.debug.xcconfig"; sourceTree = "<group>"; };
+		AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BFA6D9A6A35CDA712298C4 /* libPods-HomeBin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				113636611E9F1D51009C4D73 /* HomeBin */,
 				113636601E9F1D51009C4D73 /* Products */,
+				82BCD770616615F0DAC87031 /* Pods */,
+				AF520508D2EC4A767D9FAE67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82BCD770616615F0DAC87031 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */,
+				AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF520508D2EC4A767D9FAE67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113636761E9F1D51009C4D73 /* Build configuration list for PBXNativeTarget "HomeBin" */;
 			buildPhases = (
+				1059EC8375C71951FCFEAE99 /* [CP] Check Pods Manifest.lock */,
 				1136365B1E9F1D51009C4D73 /* Sources */,
 				1136365C1E9F1D51009C4D73 /* Frameworks */,
 				1136365D1E9F1D51009C4D73 /* Resources */,
+				B1EF7344D0E44CA8EFD3B443 /* [CP] Embed Pods Frameworks */,
+				EE21E347528194041A8E630F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1059EC8375C71951FCFEAE99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeBin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1EF7344D0E44CA8EFD3B443 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE21E347528194041A8E630F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1136365B1E9F1D51009C4D73 /* Sources */ = {
@@ -270,6 +348,7 @@
 		};
 		113636771E9F1D51009C4D73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HomeBin/Info.plist;
@@ -281,6 +360,7 @@
 		};
 		113636781E9F1D51009C4D73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HomeBin/Info.plist;

@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"波浪";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.present = 0.3;
     self.slider.value = self.present;
@@ -57,8 +58,6 @@
     if (!_scaleView) {
         _scaleView = [HBScaleView new];
         [self.view addSubview:_scaleView];
-        
-        _scaleView.backgroundColor = [UIColor darkGrayColor];
         
         [_scaleView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.mas_equalTo(20);

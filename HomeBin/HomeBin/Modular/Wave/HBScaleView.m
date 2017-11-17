@@ -33,6 +33,8 @@
 }
 
 - (void)_init {
+    self.backgroundColor = [UIColor whiteColor];
+    
     self.scaleCount = 100;
     self.scaleWidth = 2.0;
     self.scaleLength = 10.0;
@@ -149,7 +151,6 @@
         [self addSubview:_waveView];
         
         _waveView.clipsToBounds = YES;
-        _waveView.backgroundColor = [UIColor grayColor];
         
         [_waveView mas_makeConstraints:^(MASConstraintMaker *make) {
             CGFloat offset = self.scaleLength + self.cycleMargin + self.cycleWidth + self.waveMargin;

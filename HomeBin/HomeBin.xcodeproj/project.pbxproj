@@ -21,6 +21,15 @@
 		B75163571FBD296E00795450 /* BasePopPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163521FBD296E00795450 /* BasePopPushController.m */; };
 		B75163611FBD2C0800795450 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163601FBD2C0800795450 /* BaseButton.m */; };
 		B75163641FBD2CFD00795450 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163631FBD2CFD00795450 /* HomeViewController.m */; };
+		B75163681FBD3B0800795450 /* HomeListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163671FBD3B0800795450 /* HomeListView.m */; };
+		B751636B1FBD3F2F00795450 /* HomeData.m in Sources */ = {isa = PBXBuildFile; fileRef = B751636A1FBD3F2F00795450 /* HomeData.m */; };
+		B751636E1FBD43CD00795450 /* HBMenuIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751636D1FBD43CD00795450 /* HBMenuIndexController.m */; };
+		B75163711FBD43E500795450 /* HBDrawingBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163701FBD43E500795450 /* HBDrawingBoardController.m */; };
+		B75163741FBD667D00795450 /* HBDrawingBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163731FBD667D00795450 /* HBDrawingBoard.m */; };
+		B75163781FBD6AAA00795450 /* HBWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163771FBD6AAA00795450 /* HBWaveViewController.m */; };
+		B751637B1FBD6C7500795450 /* HBWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B751637A1FBD6C7500795450 /* HBWaveView.m */; };
+		B751637E1FBD7F7E00795450 /* HBScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B751637D1FBD7F7E00795450 /* HBScaleView.m */; };
+		B75163811FBD89D600795450 /* UIControl+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163801FBD89D600795450 /* UIControl+Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +64,24 @@
 		B75163601FBD2C0800795450 /* BaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
 		B75163621FBD2CFD00795450 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B75163631FBD2CFD00795450 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B75163661FBD3B0800795450 /* HomeListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListView.h; sourceTree = "<group>"; };
+		B75163671FBD3B0800795450 /* HomeListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListView.m; sourceTree = "<group>"; };
+		B75163691FBD3F2F00795450 /* HomeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeData.h; sourceTree = "<group>"; };
+		B751636A1FBD3F2F00795450 /* HomeData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeData.m; sourceTree = "<group>"; };
+		B751636C1FBD43CD00795450 /* HBMenuIndexController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBMenuIndexController.h; sourceTree = "<group>"; };
+		B751636D1FBD43CD00795450 /* HBMenuIndexController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBMenuIndexController.m; sourceTree = "<group>"; };
+		B751636F1FBD43E500795450 /* HBDrawingBoardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDrawingBoardController.h; sourceTree = "<group>"; };
+		B75163701FBD43E500795450 /* HBDrawingBoardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDrawingBoardController.m; sourceTree = "<group>"; };
+		B75163721FBD667D00795450 /* HBDrawingBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDrawingBoard.h; sourceTree = "<group>"; };
+		B75163731FBD667D00795450 /* HBDrawingBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDrawingBoard.m; sourceTree = "<group>"; };
+		B75163761FBD6AAA00795450 /* HBWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBWaveViewController.h; sourceTree = "<group>"; };
+		B75163771FBD6AAA00795450 /* HBWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBWaveViewController.m; sourceTree = "<group>"; };
+		B75163791FBD6C7500795450 /* HBWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBWaveView.h; sourceTree = "<group>"; };
+		B751637A1FBD6C7500795450 /* HBWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBWaveView.m; sourceTree = "<group>"; };
+		B751637C1FBD7F7E00795450 /* HBScaleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBScaleView.h; sourceTree = "<group>"; };
+		B751637D1FBD7F7E00795450 /* HBScaleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBScaleView.m; sourceTree = "<group>"; };
+		B751637F1FBD89D600795450 /* UIControl+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Block.h"; sourceTree = "<group>"; };
+		B75163801FBD89D600795450 /* UIControl+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Block.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +164,8 @@
 				B75163421FBD291D00795450 /* NSTimer+Block.m */,
 				B75163441FBD291D00795450 /* UIButton+Block.h */,
 				B75163411FBD291D00795450 /* UIButton+Block.m */,
+				B751637F1FBD89D600795450 /* UIControl+Block.h */,
+				B75163801FBD89D600795450 /* UIControl+Block.m */,
 			);
 			path = Additioin;
 			sourceTree = "<group>";
@@ -182,6 +211,7 @@
 				B75163651FBD2E1A00795450 /* Home */,
 				B751635A1FBD2A0E00795450 /* DrawingBoard */,
 				B75163591FBD2A0100795450 /* MenuIndex */,
+				B75163751FBD6A5C00795450 /* Wave */,
 			);
 			path = Modular;
 			sourceTree = "<group>";
@@ -189,6 +219,8 @@
 		B75163591FBD2A0100795450 /* MenuIndex */ = {
 			isa = PBXGroup;
 			children = (
+				B751636C1FBD43CD00795450 /* HBMenuIndexController.h */,
+				B751636D1FBD43CD00795450 /* HBMenuIndexController.m */,
 			);
 			path = MenuIndex;
 			sourceTree = "<group>";
@@ -196,6 +228,10 @@
 		B751635A1FBD2A0E00795450 /* DrawingBoard */ = {
 			isa = PBXGroup;
 			children = (
+				B751636F1FBD43E500795450 /* HBDrawingBoardController.h */,
+				B75163701FBD43E500795450 /* HBDrawingBoardController.m */,
+				B75163721FBD667D00795450 /* HBDrawingBoard.h */,
+				B75163731FBD667D00795450 /* HBDrawingBoard.m */,
 			);
 			path = DrawingBoard;
 			sourceTree = "<group>";
@@ -214,8 +250,25 @@
 			children = (
 				B75163621FBD2CFD00795450 /* HomeViewController.h */,
 				B75163631FBD2CFD00795450 /* HomeViewController.m */,
+				B75163661FBD3B0800795450 /* HomeListView.h */,
+				B75163671FBD3B0800795450 /* HomeListView.m */,
+				B75163691FBD3F2F00795450 /* HomeData.h */,
+				B751636A1FBD3F2F00795450 /* HomeData.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B75163751FBD6A5C00795450 /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				B75163761FBD6AAA00795450 /* HBWaveViewController.h */,
+				B75163771FBD6AAA00795450 /* HBWaveViewController.m */,
+				B75163791FBD6C7500795450 /* HBWaveView.h */,
+				B751637A1FBD6C7500795450 /* HBWaveView.m */,
+				B751637C1FBD7F7E00795450 /* HBScaleView.h */,
+				B751637D1FBD7F7E00795450 /* HBScaleView.m */,
+			);
+			path = Wave;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,13 +396,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75163781FBD6AAA00795450 /* HBWaveViewController.m in Sources */,
 				B75163541FBD296E00795450 /* BaseNavigationController.m in Sources */,
+				B751637E1FBD7F7E00795450 /* HBScaleView.m in Sources */,
+				B751636B1FBD3F2F00795450 /* HomeData.m in Sources */,
 				B75163551FBD296E00795450 /* BaseListController.m in Sources */,
 				B75163531FBD296E00795450 /* BaseViewController.m in Sources */,
 				B75163461FBD291D00795450 /* NSTimer+Block.m in Sources */,
 				B75163611FBD2C0800795450 /* BaseButton.m in Sources */,
+				B75163681FBD3B0800795450 /* HomeListView.m in Sources */,
+				B75163811FBD89D600795450 /* UIControl+Block.m in Sources */,
+				B75163711FBD43E500795450 /* HBDrawingBoardController.m in Sources */,
+				B751636E1FBD43CD00795450 /* HBMenuIndexController.m in Sources */,
+				B75163741FBD667D00795450 /* HBDrawingBoard.m in Sources */,
 				113636671E9F1D51009C4D73 /* AppDelegate.m in Sources */,
 				B75163571FBD296E00795450 /* BasePopPushController.m in Sources */,
+				B751637B1FBD6C7500795450 /* HBWaveView.m in Sources */,
 				B75163561FBD296E00795450 /* BasePageController.m in Sources */,
 				113636641E9F1D51009C4D73 /* main.m in Sources */,
 				B75163451FBD291D00795450 /* UIButton+Block.m in Sources */,

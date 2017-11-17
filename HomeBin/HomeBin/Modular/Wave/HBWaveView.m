@@ -7,127 +7,128 @@
 //
 
 #import "HBWaveView.h"
+#import "NSTimer+Block.h"
 
 @interface HBWaveView ()
 
-@property (nonatomic,strong) NSTimer * myTimer;
-
-@property (nonatomic,assign) CGRect MYframe;
-
-@property (nonatomic,assign) CGFloat fa;
-
-@property (nonatomic,assign) CGFloat bigNumber;
+@property (nonatomic, strong) NSTimer *timer;       // 定时移动
+@property (nonatomic, assign) CGFloat amplitude;    // 振幅
+@property (nonatomic, assign) CGFloat cycle;        // 周期
+@property (nonatomic, assign) CGFloat offset;       // 偏移
 
 @end
 
 @implementation HBWaveView
 
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        _MYframe = frame;
-        self.backgroundColor = [UIColor whiteColor];
-        UILabel * presentLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        presentLabel.textAlignment = 1;
-        [self addSubview:presentLabel];
-        self.presentlabel = presentLabel;
-        self.presentlabel.font = [UIFont systemFontOfSize:15];
-        
-        
+- (void)dealloc {
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
     }
-    return self;
 }
 
-- (void)createTimer{
+- (void)drawRect:(CGRect)rect {
+    // 由于屏幕坐标y自上而下, 因此要得到正弦波形需要取反
+    CGFloat A = -self.amplitude;
+    CGFloat a = 2 * M_PI / self.cycle;
+    CGFloat b = self.offset;
+    CGFloat c = CGRectGetHeight(self.bounds) * (1 - self.present);
     
-    if (!self.myTimer) {
-        self.myTimer = [NSTimer scheduledTimerWithTimeInterval:0.08 target:self selector:@selector(action) userInfo:nil repeats:YES];
-    }
-    [self.myTimer setFireDate:[NSDate distantPast]];
+    // 画第一条线
+    UIColor *color1 = [UIColor colorWithRed:1 green:0 blue:1 alpha:0.3];
+    [self drawWaveRect:rect color:color1 A:A a:a b:b c:c];
+    
+    A *= 0.8;
+    b += self.cycle / 1.3;
+    a *= 0.6;
+    // 画第二条线
+    UIColor *color2 = [UIColor colorWithRed:0 green:1 blue:1 alpha:0.5];
+    [self drawWaveRect:rect color:color2 A:A a:a b:b c:c];
 }
-- (void)action{
-    //让波浪移动效果
-    _fa = _fa+10;
-    if (_fa >= _MYframe.size.width * 2.0) {
-        _fa = 0;
-    }
-    [self setNeedsDisplay];
-}
-- (void)drawRect:(CGRect)rect{
-    
-    
+
+// y = A * sin(ax + b) + c
+- (void)drawWaveRect:(CGRect)rect
+               color:(UIColor *)color
+                   A:(CGFloat)A
+                   a:(CGFloat)a
+                   b:(CGFloat)b
+                   c:(CGFloat)c {
+    // 获取上下文
     CGContextRef context = UIGraphicsGetCurrentContext();
-    // 创建路径
+    
+    // 设置线宽与填充颜色
+    CGContextSetLineWidth(context, 1);
+    CGContextSetFillColorWithColor(context, color.CGColor);
+
+    // 新建一条路劲
     CGMutablePathRef path = CGPathCreateMutable();
     
-    //画水
-    CGContextSetLineWidth(context, 10);
-    UIColor * blue = [UIColor colorWithRed:1 green:0 blue:1 alpha:0.3];
-    CGContextSetFillColorWithColor(context, [blue CGColor]);
-    
-    float y= (1 - self.present) * rect.size.height;
-    float y1= (1 - self.present) * rect.size.height;
-    
-    //    CGPathMoveToPoint(path, NULL, 0, y);
-    for(float x=0;x<=rect.size.width * 1.0;x++){
-        //正弦函数
-        y =  sin( x/rect.size.width * M_PI + _fa/rect.size.width *M_PI ) *_bigNumber + (1 - self.present) * rect.size.height ;
-        if (x < 1) {
-            CGPathMoveToPoint(path, NULL, 0, y);
-            
-        }
+    CGFloat x = 0;
+    CGFloat y = A * sin(a * x + b) + c;
+    CGPathMoveToPoint(path, nil, x, y);
+
+    for (x++; x < rect.size.width; x++) {
+        y = A * sin(a * x + b) + c;
         CGPathAddLineToPoint(path, nil, x, y);
     }
     
+    // 封口
     CGPathAddLineToPoint(path, nil, rect.size.width , rect.size.height );
     CGPathAddLineToPoint(path, nil, 0, rect.size.height );
     CGPathCloseSubpath(path);
-    // CGPathAddLineToPoint(path, nil, 0, 200);
     
+    // 添加路劲
     CGContextAddPath(context, path);
-    //    CGContextFillPath(context);
-    CGContextDrawPath(context, kCGPathFillStroke);
+    
+    // 填充路劲
+    CGContextDrawPath(context, kCGPathFill);
     CGPathRelease(path);
-    
-    
-        CGMutablePathRef path1 = CGPathCreateMutable();
-        //  float y1=200;
-        //画水
-        CGContextSetLineWidth(context, 1);
-        UIColor * blue1 = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.8];
-        CGContextSetFillColorWithColor(context, [blue1 CGColor]);
-    
-    
-        //  float y1= 200;
-        CGPathMoveToPoint(path1, NULL, 0, y1);
-        for(float x=0;x<=rect.size.width;x++){
-    
-            y1= sin( x/rect.size.width * M_PI + _fa/rect.size.width *M_PI  +M_PI ) *_bigNumber + (1 - self.present) * rect.size.height ;
-            CGPathAddLineToPoint(path1, nil, x, y1);
-        }
-    
-        CGPathAddLineToPoint(path1, nil, rect.size.height, rect.size.width );
-        CGPathAddLineToPoint(path1, nil, 0, rect.size.height );
-        //CGPathAddLineToPoint(path, nil, 0, _currentLinePointY);
-    
-        CGContextAddPath(context, path1);
-        CGContextFillPath(context);
-        CGContextDrawPath(context, kCGPathStroke);
-        CGPathRelease(path1);
 }
 
+- (void)createTimer{
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    
+    WeakObj(self);
+    self.timer = [NSTimer hb_scheduledTimerWithTimeInterval:0.03 repeats:YES block:^(NSTimer *timer) {
+        selfWeak.offset += 0.08;
+        if (selfWeak.offset >= CGRectGetWidth(selfWeak.bounds) * 2) {
+            selfWeak.offset = 0.0;
+        }
+        [selfWeak setNeedsDisplay];
+    }];
+    [self.timer fire];
+}
 
 - (void)setPresent:(CGFloat)present{
+    if (present < 0.0) {
+        present = 0.0;
+    } else if (present > 1.0) {
+        present = 1.0;
+    }
+    
     _present = present;
+    
     //启动定时器
     [self createTimer];
-    //修改波浪的幅度
-    if (present <= 0.5) {
-        _bigNumber = _MYframe.size.height * 0.1 * present * 2;
-    }else{
-        _bigNumber = _MYframe.size.height * 0.1 * (1 - present) * 2;
+}
+
+// 振幅, 越靠近上下两边, 振幅越小
+- (CGFloat)amplitude {
+    CGFloat offsetPer = 0.0;
+    if (self.present < 0.5) {
+        offsetPer = self.present;
+    } else {
+        offsetPer = 1 - self.present;
     }
-    NSString *str = [NSString stringWithFormat:@"%.2f%%",_present * 100.0];
-    self.presentlabel.text = str;
+    _amplitude = CGRectGetHeight(self.frame) * offsetPer * 0.3;
+
+    return _amplitude;
+}
+
+// 周期距离, 即一个周期的正弦波长度
+- (CGFloat)cycle {
+    return CGRectGetWidth(self.bounds) * 1.5;
 }
 
 @end

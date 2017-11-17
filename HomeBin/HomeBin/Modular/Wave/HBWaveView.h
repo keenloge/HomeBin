@@ -11,7 +11,5 @@
 @interface HBWaveView : UIView
 
 @property (nonatomic,assign)CGFloat present;
-@property (nonatomic,strong)UILabel * presentlabel;
-- (instancetype)initWithFrame:(CGRect)frame;
 
 @end

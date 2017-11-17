@@ -8,12 +8,10 @@
 
 #import "HBWaveViewController.h"
 #import "HBScaleView.h"
-#import "HBWaveView.h"
 #import "UIControl+Block.h"
 
 @interface HBWaveViewController ()
 
-@property (nonatomic, strong) HBWaveView *waveView;
 @property (nonatomic, strong) HBScaleView *scaleView;
 @property (nonatomic, strong) UISlider *slider;
 @property (nonatomic, assign) CGFloat present;
@@ -54,18 +52,6 @@
 }
 
 #pragma mark - Getter
-
-- (HBWaveView *)waveView {
-    if (!_waveView) {
-        _waveView = [[HBWaveView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
-        [self.view addSubview:_waveView];
-        
-//        [_waveView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.mas_equalTo(UIEdgeInsetsZero);
-//        }];
-    }
-    return _waveView;
-}
 
 - (HBScaleView *)scaleView {
     if (!_scaleView) {

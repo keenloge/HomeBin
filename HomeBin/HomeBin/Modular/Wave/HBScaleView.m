@@ -7,10 +7,12 @@
 //
 
 #import "HBScaleView.h"
+#import "HBWaveView.h"
 
 @interface HBScaleView ()
 
 @property (nonatomic, assign) CGRect scaleRect;
+@property (nonatomic, strong) HBWaveView *waveView;
 
 @end
 
@@ -41,6 +43,13 @@
     self.cycleWidth = 1.0;
     self.cycleColor = [UIColor greenColor];
     self.cycleMargin = 10.0;
+    
+    self.waveMargin = 10.0;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.waveView.layer.cornerRadius = CGRectGetMidX(self.waveView.bounds);
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -51,6 +60,8 @@
     
     // 画当前高亮刻度
     [self drawProcessScale:context];
+    
+    [super drawRect:rect];
 }
 
 - (void)drawScale:(CGContextRef)context {
@@ -117,6 +128,7 @@
 - (void)setPresent:(CGFloat)present{
     _present = present;
     [self setNeedsDisplay];
+    self.waveView.present = present;
 }
 
 - (CGRect)scaleRect {
@@ -129,6 +141,22 @@
         _scaleRect = CGRectMake(pointX, pointY, side, side);
     }
     return _scaleRect;
+}
+
+- (HBWaveView *)waveView {
+    if (!_waveView) {
+        _waveView = [HBWaveView new];
+        [self addSubview:_waveView];
+        
+        _waveView.clipsToBounds = YES;
+        _waveView.backgroundColor = [UIColor grayColor];
+        
+        [_waveView mas_makeConstraints:^(MASConstraintMaker *make) {
+            CGFloat offset = self.scaleLength + self.cycleMargin + self.cycleWidth + self.waveMargin;
+            make.edges.mas_equalTo(UIEdgeInsetsMake(offset, offset, offset, offset));
+        }];
+    }
+    return _waveView;
 }
 
 @end

@@ -23,4 +23,6 @@
 @property (nonatomic, strong) UIColor *cycleColor;  // 内圈颜色, 默认绿
 @property (nonatomic, assign) CGFloat cycleMargin;  // 内圈偏移, 相对刻度内测, 为正,向内偏移 反之,向外偏移, 默认为10
 
+@property (nonatomic, assign) CGFloat waveMargin;   // 波浪偏移, 相对于内圈, 默认为 10
+
 @end

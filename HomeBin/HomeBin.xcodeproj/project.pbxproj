@@ -12,6 +12,7 @@
 		1136366F1E9F1D51009C4D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1136366E1E9F1D51009C4D73 /* Assets.xcassets */; };
 		113636721E9F1D51009C4D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113636701E9F1D51009C4D73 /* LaunchScreen.storyboard */; };
 		48BFA6D9A6A35CDA712298C4 /* libPods-HomeBin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */; };
+		B74909B31FC2747900550FE3 /* HBDrawingSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B74909B21FC2747900550FE3 /* HBDrawingSettingView.m */; };
 		B75163451FBD291D00795450 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163411FBD291D00795450 /* UIButton+Block.m */; };
 		B75163461FBD291D00795450 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163421FBD291D00795450 /* NSTimer+Block.m */; };
 		B75163531FBD296E00795450 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B751634A1FBD296E00795450 /* BaseViewController.m */; };
@@ -30,6 +31,8 @@
 		B751637B1FBD6C7500795450 /* HBWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B751637A1FBD6C7500795450 /* HBWaveView.m */; };
 		B751637E1FBD7F7E00795450 /* HBScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B751637D1FBD7F7E00795450 /* HBScaleView.m */; };
 		B75163811FBD89D600795450 /* UIControl+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B75163801FBD89D600795450 /* UIControl+Block.m */; };
+		B75294E11FC3C8D300BCDFC1 /* HBSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B75294E01FC3C8D300BCDFC1 /* HBSlider.m */; };
+		B75294E41FC4317F00BCDFC1 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B75294E31FC4317F00BCDFC1 /* UIColor+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,8 @@
 		3BA03B4516C610E0750F8380 /* libPods-HomeBin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HomeBin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C6CE1FA1FDFC1C39161866 /* Pods-HomeBin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.debug.xcconfig"; sourceTree = "<group>"; };
 		AC255FCE64E78C6CCE6F7CBE /* Pods-HomeBin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBin.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBin/Pods-HomeBin.release.xcconfig"; sourceTree = "<group>"; };
+		B74909B11FC2747900550FE3 /* HBDrawingSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDrawingSettingView.h; sourceTree = "<group>"; };
+		B74909B21FC2747900550FE3 /* HBDrawingSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDrawingSettingView.m; sourceTree = "<group>"; };
 		B75163411FBD291D00795450 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 		B75163421FBD291D00795450 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
 		B75163431FBD291D00795450 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
@@ -82,6 +87,10 @@
 		B751637D1FBD7F7E00795450 /* HBScaleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBScaleView.m; sourceTree = "<group>"; };
 		B751637F1FBD89D600795450 /* UIControl+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Block.h"; sourceTree = "<group>"; };
 		B75163801FBD89D600795450 /* UIControl+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Block.m"; sourceTree = "<group>"; };
+		B75294DF1FC3C8D300BCDFC1 /* HBSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBSlider.h; sourceTree = "<group>"; };
+		B75294E01FC3C8D300BCDFC1 /* HBSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBSlider.m; sourceTree = "<group>"; };
+		B75294E21FC4317F00BCDFC1 /* UIColor+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		B75294E31FC4317F00BCDFC1 /* UIColor+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +175,8 @@
 				B75163411FBD291D00795450 /* UIButton+Block.m */,
 				B751637F1FBD89D600795450 /* UIControl+Block.h */,
 				B75163801FBD89D600795450 /* UIControl+Block.m */,
+				B75294E21FC4317F00BCDFC1 /* UIColor+Additions.h */,
+				B75294E31FC4317F00BCDFC1 /* UIColor+Additions.m */,
 			);
 			path = Additioin;
 			sourceTree = "<group>";
@@ -232,6 +243,10 @@
 				B75163701FBD43E500795450 /* HBDrawingBoardController.m */,
 				B75163721FBD667D00795450 /* HBDrawingBoard.h */,
 				B75163731FBD667D00795450 /* HBDrawingBoard.m */,
+				B74909B11FC2747900550FE3 /* HBDrawingSettingView.h */,
+				B74909B21FC2747900550FE3 /* HBDrawingSettingView.m */,
+				B75294DF1FC3C8D300BCDFC1 /* HBSlider.h */,
+				B75294E01FC3C8D300BCDFC1 /* HBSlider.m */,
 			);
 			path = DrawingBoard;
 			sourceTree = "<group>";
@@ -400,15 +415,18 @@
 				B75163541FBD296E00795450 /* BaseNavigationController.m in Sources */,
 				B751637E1FBD7F7E00795450 /* HBScaleView.m in Sources */,
 				B751636B1FBD3F2F00795450 /* HomeData.m in Sources */,
+				B74909B31FC2747900550FE3 /* HBDrawingSettingView.m in Sources */,
 				B75163551FBD296E00795450 /* BaseListController.m in Sources */,
 				B75163531FBD296E00795450 /* BaseViewController.m in Sources */,
 				B75163461FBD291D00795450 /* NSTimer+Block.m in Sources */,
+				B75294E11FC3C8D300BCDFC1 /* HBSlider.m in Sources */,
 				B75163611FBD2C0800795450 /* BaseButton.m in Sources */,
 				B75163681FBD3B0800795450 /* HomeListView.m in Sources */,
 				B75163811FBD89D600795450 /* UIControl+Block.m in Sources */,
 				B75163711FBD43E500795450 /* HBDrawingBoardController.m in Sources */,
 				B751636E1FBD43CD00795450 /* HBMenuIndexController.m in Sources */,
 				B75163741FBD667D00795450 /* HBDrawingBoard.m in Sources */,
+				B75294E41FC4317F00BCDFC1 /* UIColor+Additions.m in Sources */,
 				113636671E9F1D51009C4D73 /* AppDelegate.m in Sources */,
 				B75163571FBD296E00795450 /* BasePopPushController.m in Sources */,
 				B751637B1FBD6C7500795450 /* HBWaveView.m in Sources */,

@@ -8,10 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HBDrawingBoard : UIView
+@protocol HBDrawingControlDelegate
 
-@property (nonatomic, readonly) UIImage *snapImage;
-@property (nonatomic, strong) UIColor *paintColor;
-@property (nonatomic, assign) CGFloat paintWidth;
+- (UIColor *)hbPaintColor;
+- (void)updateHBPaintColor:(UIColor *)color;
+
+- (CGFloat)hbPaintWidth;
+- (void)updateHBPaintWidth:(CGFloat)width;
+
+- (UIImage *)hbSnapImage;
+
+- (BOOL)hbCanUndo;
+- (BOOL)hbCanRedo;
+- (void)hbUndo;
+- (void)hbRedo;
+
+@end
+
+@interface HBDrawingBoard : UIView <HBDrawingControlDelegate>
+
 
 @end

@@ -8,10 +8,12 @@
 
 #import "HBDrawingBoardController.h"
 #import "HBDrawingBoard.h"
+#import "HBDrawingSettingView.h"
 
 @interface HBDrawingBoardController ()
 
 @property (nonatomic, strong) HBDrawingBoard *boardView;
+@property (nonatomic, strong) HBDrawingSettingView *settingView;
 
 @end
 
@@ -21,8 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"画板";
-    
-    self.boardView.backgroundColor = [UIColor whiteColor];
+
+    [self commitSetting];
+    self.boardView.opaque = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +43,25 @@
 }
 */
 
+- (void)showSetting {
+    [self.settingView showInView:self.view color:self.boardView.hbPaintColor width:self.boardView.hbPaintWidth];
+    
+    WeakObj(self);
+    [self addBarButtonItemRightTitle:@"完成" block:^(id sender) {
+        [selfWeak commitSetting];
+        [selfWeak.boardView updateHBPaintColor:selfWeak.settingView.color];
+        [selfWeak.boardView updateHBPaintWidth:selfWeak.settingView.width];
+        [selfWeak.settingView hide];
+    }];
+}
+
+- (void)commitSetting {
+    WeakObj(self);
+    [self addBarButtonItemRightTitle:@"设置" block:^(id sender) {
+        [selfWeak showSetting];
+    }];
+}
+
 - (HBDrawingBoard *)boardView {
     if (!_boardView) {
         _boardView = [HBDrawingBoard new];
@@ -50,6 +72,23 @@
         }];
     }
     return _boardView;
+}
+
+- (HBDrawingSettingView *)settingView {
+    if (!_settingView) {
+        _settingView = [[HBDrawingSettingView alloc] init];
+        WeakObj(self);
+        _settingView.cancel = ^{
+            [selfWeak commitSetting];
+        };
+        _settingView.undo = ^{
+            [selfWeak.boardView hbUndo];
+        };
+        _settingView.redo = ^{
+            [selfWeak.boardView hbRedo];
+        };
+    }
+    return _settingView;
 }
 
 @end

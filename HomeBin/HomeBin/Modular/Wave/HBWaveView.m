@@ -56,9 +56,9 @@
     // 画第一条线
     [self drawWaveRect:rect color:self.behindColor A:A a:a b:b c:c];
     
-    A *= 0.8;
-    b += self.cycle / 1.3;
-    a *= 0.6;
+    A *= 0.618;
+    a *= 0.618;
+    b *= 0.618;
     // 画第二条线
     [self drawWaveRect:rect color:self.frontColor A:A a:a b:b c:c];
 }
@@ -123,13 +123,13 @@
     } else {
         offsetPer = 1 - self.present;
     }
-    _amplitude = CGRectGetHeight(self.frame) * offsetPer * 0.3;
+    _amplitude = CGRectGetHeight(self.frame) * offsetPer * 0.2;
     return _amplitude;
 }
 
 // 周期距离, 即一个周期的正弦波长度
 - (CGFloat)cycle {
-    return CGRectGetWidth(self.bounds) * 1.5;
+    return CGRectGetWidth(self.bounds) * 2.5;
 }
 
 // 定时刷新
@@ -138,7 +138,7 @@
         WeakObj(self);
         // 频率不能太低, 否则会有跳动感
         _timer = [NSTimer hb_scheduledTimerWithTimeInterval:0.03 repeats:YES block:^(NSTimer *timer) {
-            selfWeak.offset += 0.08;
+            selfWeak.offset += 0.03;
             if (selfWeak.offset >= CGRectGetWidth(selfWeak.bounds) * 2) {
                 selfWeak.offset = 0.0;
             }
